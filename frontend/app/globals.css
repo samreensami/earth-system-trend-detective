@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-space: "Space Grotesk", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #020817;
+  color: #e2e8f0;
+  font-family: var(--font-space);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0a1628; }
+::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2d5a8e; }
+
+/* Recharts tooltip override */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  background: #0a1628 !important;
+  border: 1px solid #1e3a5f !important;
+  border-radius: 8px !important;
+  color: #e2e8f0 !important;
+}
+
+@layer utilities {
+  .glow-sky {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+  }
+  .glow-sky-sm {
+    box-shadow: 0 0 8px rgba(14, 165, 233, 0.2);
+  }
+  .glass {
+    background: rgba(10, 22, 40, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
